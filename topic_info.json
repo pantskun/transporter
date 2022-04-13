@@ -1,0 +1,102 @@
+{
+    "inner":[
+      {
+        "topicName":"main",
+        "pubCluster":"DTP.MC.set1",
+        "pubSetID":3, //uint16
+        "pubSetIndex":1, //uint16
+        "topicID":10, //uint16
+        "endpoint":"224.3.2.15:28002"
+      },
+      {
+        "topicName":"follow",
+        "pubCluster":"DTP.MC.set1",
+        "pubSetID":3, //uint16
+        "pubSetIndex":1, //uint16
+        "topicID":7, //uint16
+        "nodeID":1, 
+        "nodeIndex":1, //uint16
+        "endpoint":"224.3.2.11:28002",
+        "net":{
+          "name":"intranet",
+          "adapter":"a1",
+          "ipv4":["197.3.2.5","197.3.2.9"],
+          "ipv6":[]
+        }
+      }
+    ],
+    
+    "pub_extern":{
+  
+    },
+  
+    "sub_extern":{
+      "biz_topic":[
+        // biztopic不要求区分接收方，但要求区分发送方
+        {
+          "topicName":"topicName1",
+          "pubCluster":"DTP.RC.set1",
+          "pubSetID":1, //uint16
+          "pubSetIndex":1, //uint16
+          "topicID":0, //uint16
+          "endpoint":"224.3.2.5:28002",
+          "net":{
+              "name":"intranet",
+              "adapter":"a1",
+              "ipv4":["197.3.2.5","197.3.2.9"],
+              "ipv6":[]
+          }
+        },
+        {
+          "topicName":"topicName1",
+          "pubCluster":"DTP.RC.set2",
+          "pubSetID":2,
+          "pubSetIndex":2, //uint16
+          "topicID":1, //uint16
+          "endpoint":"224.3.2.6:28002",
+          "net":{
+              "name":"intranet",
+              "adapter":"a1",
+              "ipv4":["197.3.2.5","197.3.2.9"],
+              "ipv6":[]
+          }
+        }
+      ],
+      "set_topic":[
+        {
+            "topicName":"DTP.MC",
+            "pubCluster":"DTP.RC.set1",
+            "pubSetID":1,
+            "pubSetIndex":1, //uint16
+            "subCluster":"DTP.MC.set1",
+            "subSetID":3,
+            "subSetIndex":1, //uint16
+            "topicID":2, //uint16
+            "endpoint":"224.3.2.7:28002",
+            "net":{
+              "name":"intranet",
+              "adapter":"a1",
+              "ipv4":["197.3.2.5","197.3.2.9"],
+              "ipv6":[]
+            }
+        },
+        {
+            "topicName":"DTP.MC",
+            "pubCluster":"DTP.RC.set2",
+            "pubSetID":2,
+            "pubSetIndex":2, //uint16
+            "subCluster":"DTP.MC.set1",
+            "subSetID":3,
+            "subSetIndex":1, //uint16
+            "topicID":3, //uint16
+            "endpoint":"224.3.2.8:28002",
+            "net":{
+              "name":"intranet",
+              "adapter":"a1",
+              "ipv4":["197.3.2.5","197.3.2.9"],
+              "ipv6":[]
+            }
+        }
+      ]
+    }
+  }
